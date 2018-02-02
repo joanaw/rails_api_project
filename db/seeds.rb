@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+7.times do
+  Profile.create({
+    name: Faker::HarryPotter.character,
+    location: Faker::HarryPotter.house,
+    body: Faker::HarryPotter.quote
+  }) 
+end
