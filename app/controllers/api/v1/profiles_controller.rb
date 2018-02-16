@@ -51,9 +51,9 @@
           @profile = Profile.find(params[:id])
         end
         
-        # Never trust parameters from the internet, only allow the white list through
+        # Never trust parameters from the internet, only allow through whitelisted
         def profile_params
-          params.permit(:name, :location, :body)
+          params.require(:profile).permit(:name, :location, :body)
         end
       end
     end  
